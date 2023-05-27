@@ -58,5 +58,4 @@ function library:CreateWindow(name)
             print ("works!")
         end)
     end
-    return SpaceLibrary
-    end
+end

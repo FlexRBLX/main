@@ -1,0 +1,62 @@
+local library = {}
+
+function library:CreateWindow(name)
+
+    local MainFrame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local TopBar = Instance.new("Frame")
+    local UICorner_2 = Instance.new("UICorner")
+    local TextButton = Instance.new("TextButton")
+    local UICorner_3 = Instance.new("UICorner")
+    local TextLabel = Instance.new("TextLabel")
+    local UICorner_4 = Instance.new("UICorner")
+    local TextButton_2 = Instance.new("TextButton")
+    local UICorner_5 = Instance.new("UICorner")
+    local UIListLayout = Instance.new("UIListLayout")
+
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = game.CoreGui
+    MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    MainFrame.Position = UDim2.new(0.325622767, 0, 0.304081619, 0)
+    MainFrame.Size = UDim2.new(0, 391, 0, 191)
+
+    UICorner.Parent = MainFrame
+
+    TopBar.Name = "TopBar"
+    TopBar.Parent = MainFrame
+    TopBar.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TopBar.Size = UDim2.new(0, 391, 0, 30)
+    
+    UICorner_2.Parent = TopBar
+
+    TextButton.Parent = TopBar
+    TextButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton.Position = UDim2.new(0.925831199, 0, -0.0113438927, 0)
+    TextButton.Size = UDim2.new(0, 29, 0, 30)
+    TextButton.Font = Enum.Font.SourceSans
+    TextButton.Text = "X"
+    TextButton.TextColor3 = Color3.fromRGB(200, 200, 200)
+    TextButton.TextSize = 16.000
+
+    local SpaceLibrary = {}
+
+    function SpaceLibrary:CreateButton(name, callback)
+        local callback = callback or function() end
+        local Button = Instance.new("TextButton")
+
+        TextButton_2.Parent = MainFrame
+        TextButton_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+        TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        TextButton_2.Position = UDim2.new(0, 0, 0.178010479, 0)
+        TextButton_2.Size = UDim2.new(0, 91, 0, 30)
+        TextButton_2.Font = Enum.Font.SourceSans
+        TextButton_2.TextColor3 = Color3.fromRGB(200, 200, 200)
+        TextButton_2.TextSize = 16.000
+        TextButton_2.MouseButton1Down:Connect(function()
+            print ("works!")
+        end)
+    end
+    return SpaceLibrary
+    end
